@@ -1,6 +1,7 @@
 import 'server-only';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import type { Route } from 'next';
 import { env } from '@/shared/config/env';
 
 export type Role = 'ROOT' | 'ADMIN' | 'USER';
@@ -48,13 +49,13 @@ export async function getSession(): Promise<Session | null> {
 /** Garde : session requise, sinon redirection vers /login. */
 export async function requireSession(): Promise<Session> {
   const session = await getSession();
-  if (!session) redirect('/login');
+  if (!session) redirect('/login' as Route);
   return session;
 }
 
 /** Garde : rôle requis, sinon redirection vers l'accueil. */
 export async function requireRole(...roles: Role[]): Promise<Session> {
   const session = await requireSession();
-  if (!roles.includes(session.role)) redirect('/');
+  if (!roles.includes(session.role)) redirect('/' as Route);
   return session;
 }

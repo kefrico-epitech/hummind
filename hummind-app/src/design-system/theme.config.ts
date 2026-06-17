@@ -5,7 +5,7 @@
 export const theme = {
   fonts: {
     sans: 'var(--font-inter)',
-    display: 'var(--font-sora)',
+    display: 'var(--font-poppins)',
   },
   /** Mode visuel par défaut. À brancher sur un toggle si on fait du dark. */
   mode: 'light' as 'light' | 'dark',
