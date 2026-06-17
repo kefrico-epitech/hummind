@@ -1,0 +1,55 @@
+# Internal archive and tool folders
+_archive/
+.playwright/
+.playwright-mcp/
+figma/
+
+# Dependencies
+**/node_modules/
+**/.pnp
+**/.pnp.*
+**/.yarn/
+
+# Build outputs
+**/.next/
+**/out/
+**/dist/
+**/build/
+**/coverage/
+**/.nyc_output/
+**/.turbo/
+**/.cache/
+**/.vercel/
+
+# Environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Logs and runtime files
+**/logs/
+**/*.log
+**/npm-debug.log*
+**/pnpm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/lerna-debug.log*
+**/.codex-*.log
+**/.next-dev-*.log
+**/tmp-*.json
+**/*.pid
+**/*.pid.lock
+**/*.seed
+**/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# OS and editor files
+**/.DS_Store
+**/Thumbs.db
+**/.idea/
+**/.vscode/
+**/*.sublime-workspace
+**/*.launch
+
+# TypeScript / generated helpers
+**/next-env.d.ts
+**/*.tsbuildinfo

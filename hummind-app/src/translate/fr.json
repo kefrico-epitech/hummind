@@ -1,0 +1,22 @@
+{
+    "home": {
+        "badge": "Expérience d’apprentissage assistée par IA",
+        "title": "Apprenez, créez et enseignez avec votre IA intégrée",
+        "subtitle": "Hummind vous permet de concevoir, diffuser et faire évoluer des parcours pédagogiques personnalisés, pour les écoles, centres de formation et organisations.",
+        "ctaPrimary": "Commencer maintenant",
+        "ctaSecondary": "Explorer la plateforme",
+        "meta": "Pensé pour les écoles africaines · Multi-tenant · Sécurisé · Observabilité via PostHog.",
+        "spacesTitle": "Espaces",
+        "spacesBadge": "Multi-tenant",
+        "open": "Ouvrir",
+        "spaces": {
+            "admin": "Gérer les établissements, les tenants, les administrateurs et les paramètres globaux.",
+            "auth": "Accéder aux pages de connexion, d'inscription et de gestion d'accès.",
+            "organisation": "Gérer les classes, enseignants, apprenants et configurations de votre établissement.",
+            "public": "Accéder au site public, découvrir les fonctionnalités et la documentation.",
+            "user": "Suivre les cours, progresser dans les modules et interagir avec l’IA pédagogique."
+        },
+        "analyticsTitle": "Analyse produit",
+        "analyticsDesc": "Tous les clics et interactions sont suivis automatiquement via PostHog."
+    }
+}
