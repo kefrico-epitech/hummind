@@ -1,2 +1,0 @@
-ALTER TABLE "public"."CourseCategory" REPLICA IDENTITY FULL;
-ALTER TABLE "public"."EntityCategory" REPLICA IDENTITY FULL;

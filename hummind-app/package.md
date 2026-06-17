@@ -1,5 +1,0 @@
-- Shadcn ui
-- Next Intl
-- Posthog
-- Redux
-- ...
