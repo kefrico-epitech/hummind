@@ -21,8 +21,8 @@ Trois espaces, strictement séparés par rôle :
 
 ```
 hummind-v1/
-├── hummind-backend/     # API NestJS + Fastify + Prisma (port 3001)
-├── hummind-app/         # Frontend Next.js 16 (port 4006)
+├── hummind-backend/     # API NestJS + Fastify + Prisma (port 5500)
+├── hummind-app/         # Frontend Next.js 16 (port 4000)
 ├── figma/               # Maquettes de référence (PNG)
 └── _archive/            # Ancienne version v0 (NE PAS utiliser comme base v1)
 ```
@@ -31,7 +31,7 @@ hummind-v1/
 
 ---
 
-## 3. Backend — `hummind-backend/` (port 3001)
+## 3. Backend — `hummind-backend/` (port 5500)
 
 ### Stack
 NestJS 11 · Fastify 5 · Prisma 5 (PostgreSQL) · @nestjs/jwt + argon2 · OpenAI (REST, sans SDK) · class-validator/zod · nodemailer · pino · @nestjs/swagger · @nestjs/schedule · pdf-parse + mammoth (extraction de documents).
@@ -82,10 +82,10 @@ JWT par **cookies httpOnly** : `hm_session` (access, ~15 min) + `hm_refresh` (re
 
 ---
 
-## 4. Frontend — `hummind-app/` (port 4006)
+## 4. Frontend — `hummind-app/` (port 4000)
 
 ### Stack
-Next.js 16 (App Router, **React 19**) · Tailwind CSS v4 · Zustand · TanStack React Query 5 · React Hook Form + Zod · Radix UI · Framer Motion · Lucide. Dev : `next dev -p 4006`. Tests : Vitest + Playwright.
+Next.js 16 (App Router, **React 19**) · Tailwind CSS v4 · Zustand · TanStack React Query 5 · React Hook Form + Zod · Radix UI · Framer Motion · Lucide. Dev : `next dev -p 4000`. Tests : Vitest + Playwright.
 
 ### Organisation
 ```
@@ -156,12 +156,12 @@ cd hummind-backend
 pnpm install
 pnpm prisma migrate dev      # applique le schéma
 pnpm seed                    # ROOT + données de test
-pnpm start:dev               # http://localhost:3001 (API /api/v1, Swagger)
+pnpm start:dev               # http://localhost:5500 (API /api/v1, Swagger)
 
 # Frontend (dans un autre terminal)
 cd hummind-app
 pnpm install
-pnpm dev                     # http://localhost:4006
+pnpm dev                     # http://localhost:4000
 ```
 
 Prérequis : PostgreSQL en local (voir `DATABASE_URL`), et un Mailhog/SMTP pour les emails en dev.
@@ -170,9 +170,9 @@ Prérequis : PostgreSQL en local (voir `DATABASE_URL`), et un Mailhog/SMTP pour 
 
 ## 7. Variables d'environnement (noms uniquement)
 
-**Backend** : `NODE_ENV`, `PORT` (3001), `CORS_ORIGIN`, `APP_URL`, `DATABASE_URL`, `REDIS_URL`, `LOG_LEVEL`, `JWT_ACCESS_SECRET`, `JWT_REFRESH_SECRET`, `JWT_ACCESS_TTL`, `JWT_REFRESH_TTL`, `COOKIE_DOMAIN`, `COOKIE_SECURE`, `SMTP_HOST/PORT/USER/PASS/SECURE`, `MAIL_FROM`, `AI_PROVIDER`, `OPENAI_API_KEY`, `OPENAI_MODEL`, `OPENAI_EMBED_MODEL`, `TUTOR_MODEL`.
+**Backend** : `NODE_ENV`, `PORT` (5500), `CORS_ORIGIN`, `APP_URL`, `DATABASE_URL`, `REDIS_URL`, `LOG_LEVEL`, `JWT_ACCESS_SECRET`, `JWT_REFRESH_SECRET`, `JWT_ACCESS_TTL`, `JWT_REFRESH_TTL`, `COOKIE_DOMAIN`, `COOKIE_SECURE`, `SMTP_HOST/PORT/USER/PASS/SECURE`, `MAIL_FROM`, `AI_PROVIDER`, `OPENAI_API_KEY`, `OPENAI_MODEL`, `OPENAI_EMBED_MODEL`, `TUTOR_MODEL`.
 
-**Frontend** : `NEXT_PUBLIC_API_URL` (défaut `http://localhost:3001`), `NEXT_PUBLIC_APP_NAME` (`Hummind`).
+**Frontend** : `NEXT_PUBLIC_API_URL` (défaut `http://localhost:5500`), `NEXT_PUBLIC_APP_NAME` (`Hummind`).
 
 ---
 

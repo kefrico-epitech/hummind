@@ -1,0 +1,54 @@
+@import 'tailwindcss';
+
+/**
+ * Tokens de marque Hummind exposés à Tailwind v4.
+ * → génère les utilitaires bg-brand-500, text-mint-300, ring-brand-400, etc.
+ */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #f2effd;
+  --color-brand-100: #e4defb;
+  --color-brand-200: #c9bdf7;
+  --color-brand-300: #ad9bf2;
+  --color-brand-400: #9079ed;
+  --color-brand-500: #6b4ee6;
+  --color-brand-600: #583bd0;
+  --color-brand-700: #452daa;
+  --color-brand-800: #332184;
+  --color-brand-900: #22165e;
+
+  --color-mint-200: #8addbd;
+  --color-mint-300: #5fd0a6;
+  --color-mint-400: #3cbe8e;
+  --color-mint-500: #1fa876;
+
+  --color-lavender: #c0bce4;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Animation des panneaux slide-over (droite). */
+@keyframes hm-slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.hm-slide-in-right {
+  animation: hm-slide-in-right 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-slide-in-right {
+    animation: none;
+  }
+}
