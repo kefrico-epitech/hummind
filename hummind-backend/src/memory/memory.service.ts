@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { TutorRole } from '@prisma/client';
+import { Prisma, TutorRole } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 import { AiService } from '../ai/ai.service';
 import type { ChatMessage, ChatRole } from '../ai/ai.types';
@@ -11,6 +11,9 @@ const toChatRole = (r: TutorRole): ChatRole =>
 
 const toTutorRole = (r: ChatRole): TutorRole =>
   r === 'assistant' ? TutorRole.ASSISTANT : r === 'system' ? TutorRole.SYSTEM : TutorRole.USER;
+
+const toJsonValue = (value: LearnerMemory): Prisma.InputJsonValue =>
+  JSON.parse(JSON.stringify(value)) as Prisma.InputJsonValue;
 
 /**
  * Gère la MÉMOIRE du tuteur — séparée des appels LLM.
@@ -35,10 +38,11 @@ export class MemoryService {
   }
 
   private async saveMemory(userId: string, memory: LearnerMemory): Promise<void> {
+    const data = toJsonValue(memory);
     await this.prisma.learnerProfile.upsert({
       where: { userId },
-      update: { summary: memory.summary, data: memory },
-      create: { userId, summary: memory.summary, data: memory },
+      update: { summary: memory.summary, data },
+      create: { userId, summary: memory.summary, data },
     });
   }
 
