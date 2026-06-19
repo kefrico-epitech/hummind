@@ -4,24 +4,24 @@ import { Footer } from '@/components/Footer';
 
 const ITEMS = [
   {
-    q: 'En quoi HummindOS est-il différent d'un simple chatbot ?',
-    a: 'Hummind structure les cours, suit la progression et s'appuie sur un vrai modèle pédagogique, pas seulement sur une conversation.',
+    q: "En quoi HummindOS est-il différent d'un simple chatbot ?",
+    a: "Hummind structure les cours, suit la progression et s'appuie sur un vrai modèle pédagogique, pas seulement sur une conversation.",
   },
   {
-    q: 'Les enseignants gardent-ils la main sur les contenus ?',
-    a: 'Oui. L'IA assiste la création, mais l'enseignant reste responsable du cours et peut tout ajuster avant publication.',
+    q: "Les enseignants gardent-ils la main sur les contenus ?",
+    a: "Oui. L'IA assiste la création, mais l'enseignant reste responsable du cours et peut tout ajuster avant publication.",
   },
   {
-    q: 'Peut-on importer des cours existants ?',
-    a: 'Oui, la plateforme est pensée pour intégrer des documents et les convertir en contenus exploitables.',
+    q: "Peut-on importer des cours existants ?",
+    a: "Oui, la plateforme est pensée pour intégrer des documents et les convertir en contenus exploitables.",
   },
   {
-    q: 'Est-ce adapté à différents âges et niveaux ?',
-    a: 'Oui. Le parcours s'ajuste selon le niveau, les objectifs et le contexte d'apprentissage.',
+    q: "Est-ce adapté à différents âges et niveaux ?",
+    a: "Oui. Le parcours s'ajuste selon le niveau, les objectifs et le contexte d'apprentissage.",
   },
   {
-    q: 'L'IA va-t-elle rendre les élèves paresseux ?',
-    a: 'Non. L'IA est conçue pour faire réfléchir, questionner et guider, pas pour faire à la place de l'apprenant.',
+    q: "L'IA va-t-elle rendre les élèves paresseux ?",
+    a: "Non. L'IA est conçue pour faire réfléchir, questionner et guider, pas pour faire à la place de l'apprenant.",
   },
 ] as const;
 

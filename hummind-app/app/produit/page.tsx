@@ -47,7 +47,7 @@ export default function ProduitPage() {
               {
                 icon: Brain,
                 title: 'IA accompagnante',
-                desc: 'Le tuteur IA pose des questions, corrige et s'adapte aux élèves.',
+                desc: "Le tuteur IA pose des questions, corrige et s'adapte aux élèves.",
                 tone: 'bg-[#161629] text-white',
               },
               {
