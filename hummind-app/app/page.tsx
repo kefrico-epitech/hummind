@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { Route } from 'next';
 import { ArrowRight, ChevronDown, HelpCircle, MoveUp, X, Menu } from 'lucide-react';
 import { useState } from 'react';
+import { HeroTitle, SectionTitle, FAQTitle, FAQSubtitle, CTATitle, Subtitle } from '@/components/Typography';
 
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -81,11 +82,11 @@ export default function HomePage() {
             </div>
           )}
           <div className="mx-auto max-w-[950px] px-2 text-center sm:px-4 flex-1 flex flex-col items-center justify-center">
-            <h1 className="text-[48px] sm:text-[52px] font-black leading-tight tracking-normal text-[#171728]">
+            <HeroTitle>
               Transformer vos cours en une<br/>
               <span className="bg-[linear-gradient(90deg,#5656a2_0%,#e84747_100%)] bg-clip-text text-transparent">experience d&apos;apprentissage</span> guidee<br/>
               interactive et mesurable.
-            </h1>
+            </HeroTitle>
 
             <Link
               href={'/demo' as Route}
@@ -95,9 +96,9 @@ export default function HomePage() {
               Reserver une demo
             </Link>
 
-            <p className="mx-auto mt-6 sm:mt-10 max-w-[480px] text-[12px] sm:text-[13px] md:text-[14px] font-medium leading-6 sm:leading-7 text-[#807779]">
+            <Subtitle className="mx-auto mt-6 sm:mt-10 max-w-[480px]">
               Utilise par enseignants, ecoles et formations professionnelles
-            </p>
+            </Subtitle>
           </div>
         </div>
       </section>
@@ -106,10 +107,10 @@ export default function HomePage() {
       <section className="relative overflow-hidden rounded-t-[24px] sm:rounded-t-[40px] bg-[#141426] px-4 pt-16 text-white sm:px-8 sm:pt-24 lg:px-10 lg:pt-32">
         <div className="mx-auto max-w-[1120px]">
           <div className="mx-auto max-w-[880px] text-center">
-            <h2 className="text-[48px] sm:text-[52px] font-bold leading-tight tracking-normal">
+            <SectionTitle>
               Enseigner aujourd&apos;hui n&apos;a jamais<br/>
               été aussi exigeant.
-            </h2>
+            </SectionTitle>
             <p className="mx-auto mt-6 sm:mt-12 max-w-[780px] text-[14px] sm:text-[16px] leading-7 sm:leading-8 text-white/70">
               Les classes aux profils varies d&apos;apprenants et des programmes souvent trop
               charges rendent l&apos;apprentissage complexe.
@@ -193,10 +194,8 @@ export default function HomePage() {
       <section className="rounded-t-[40px] rounded-b-[40px] bg-[#141426] px-5 pb-20 pt-28 text-white sm:px-8 sm:pb-24 sm:pt-36 lg:px-10">
         <div className="mx-auto max-w-[1120px]">
           <div className="text-center px-2 sm:px-0">
-            <h2 className="font-display text-[40px] leading-[1.1] tracking-[-0.04em] sm:text-[56px] md:text-[72px] lg:text-[80px] font-semibold">
-              FAQ
-            </h2>
-            <p className="mt-4 sm:mt-6 text-[14px] sm:text-[16px] md:text-[18px] text-white/65">Vous aviez des questions ?</p>
+            <FAQTitle>FAQ</FAQTitle>
+            <FAQSubtitle>Vous aviez des questions ?</FAQSubtitle>
           </div>
 
           <div className="mx-auto mt-12 sm:mt-20 lg:mt-24 max-w-[840px] space-y-3 sm:space-y-5 px-2 sm:px-0">
@@ -234,9 +233,9 @@ export default function HomePage() {
           </div>
 
           <div className="mx-auto mt-28 max-w-[820px] text-center">
-            <h3 className="text-balance font-display text-[46px] font-semibold leading-[1.08] tracking-[-0.05em] sm:text-[62px] lg:text-[72px]">
+            <CTATitle>
               Parlons de votre projet pedagogique
-            </h3>
+            </CTATitle>
             <Link
               href={'/contact' as Route}
               className="mt-12 inline-flex min-w-[196px] items-center justify-center rounded-full bg-[#2f2e43] px-8 py-4 text-[15px] sm:text-[16px] font-semibold text-white transition hover:bg-[#3a3952] hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6d72d8] min-h-[44px]"
