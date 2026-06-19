@@ -13,18 +13,18 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#f5f1ef] text-[#141426]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#d8d9fb_0%,#f7ece7_54%,#f5f1ef_100%)] px-5 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-8 lg:px-10 lg:pb-32 lg:pt-12">
-        <div className="absolute left-[-10%] top-[20%] h-80 w-80 rounded-full bg-[#f4cabc]/70 blur-[120px]" />
-        <div className="absolute right-[-8%] top-[-2%] h-96 w-96 rounded-full bg-[#cfd1ff]/80 blur-[140px]" />
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#d8d9fb_0%,#f7ece7_54%,#f5f1ef_100%)] px-4 pb-16 pt-6 sm:px-6 sm:pb-24 sm:pt-8 lg:px-10 lg:pb-32 lg:pt-12">
+        <div className="absolute left-[-15%] top-[20%] h-64 w-64 rounded-full bg-[#f4cabc]/70 blur-[100px] sm:h-80 sm:w-80 sm:blur-[120px]" />
+        <div className="absolute right-[-12%] top-[-5%] h-72 w-72 rounded-full bg-[#cfd1ff]/80 blur-[100px] sm:h-96 sm:w-96 sm:blur-[140px]" />
 
         <div className="relative mx-auto max-w-[1120px]">
-          <header className="mx-auto flex w-fit items-center gap-2 rounded-full border border-white/85 bg-white/90 px-3 py-2 shadow-[0_16px_40px_rgba(28,22,54,0.12)] backdrop-blur">
+          <header className="mx-auto flex w-fit flex-col items-center gap-3 rounded-2xl sm:rounded-full border border-white/85 bg-white/90 px-4 py-3 sm:px-3 sm:py-2 shadow-[0_16px_40px_rgba(28,22,54,0.12)] backdrop-blur sm:flex-row sm:gap-2">
             <Link
               href={'/' as Route}
-              className="flex items-center rounded-full px-4 py-2 text-[12px] font-semibold text-[#151526] transition hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-[#6d72d8]"
+              className="flex items-center rounded-full px-2 py-1 text-[11px] sm:text-[12px] font-semibold text-[#151526] transition hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-[#6d72d8] sm:px-4 sm:py-2"
               aria-label="Hummind OS - Accueil"
             >
-              <Image src="/home/logo.png" alt="HummindOS" width={92} height={22} className="h-5 w-auto" />
+              <Image src="/home/logo.png" alt="HummindOS" width={92} height={22} className="h-4 w-auto sm:h-5" />
             </Link>
             <nav className="hidden items-center gap-1 sm:flex">
               <TopNavLink href={'/produit' as Route}>Notre produit</TopNavLink>
@@ -32,15 +32,15 @@ export default function HomePage() {
             </nav>
             <Link
               href={'/demo' as Route}
-              className="inline-flex items-center justify-center rounded-full bg-[#171729] px-5 py-3 text-[12px] font-semibold text-white transition hover:bg-[#0f1020] hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6d72d8] focus:ring-offset-2 min-h-[44px]"
+              className="inline-flex items-center justify-center rounded-full bg-[#171729] px-4 py-2 text-[11px] sm:text-[12px] sm:px-5 sm:py-3 font-semibold text-white transition hover:bg-[#0f1020] hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6d72d8] focus:ring-offset-2 min-h-[40px] sm:min-h-[44px]"
               aria-label="Réserver une démo gratuite"
             >
               Reserver une demo
             </Link>
           </header>
 
-          <div className="mx-auto max-w-[950px] px-3 pb-24 pt-18 text-center sm:pb-32 sm:pt-24 lg:pb-40 lg:pt-32">
-            <h1 className="text-balance font-display text-[48px] font-semibold leading-[1.0] tracking-[-0.05em] text-[#171728] sm:text-[64px] lg:text-[80px]">
+          <div className="mx-auto max-w-[950px] px-2 pb-16 pt-12 text-center sm:px-4 sm:pb-24 sm:pt-20 lg:pb-40 lg:pt-32">
+            <h1 className="text-balance font-display text-[36px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#171728] xs:text-[42px] sm:text-[56px] md:text-[68px] lg:text-[80px]">
               Transformer vos cours en une{' '}
               <span className="bg-[linear-gradient(90deg,#5656a2_0%,#e84747_100%)] bg-clip-text text-transparent">
                 experience d&apos;apprentissage guidee
@@ -50,13 +50,13 @@ export default function HomePage() {
 
             <Link
               href={'/demo' as Route}
-              className="mt-14 inline-flex min-w-[200px] items-center justify-center rounded-full bg-[#e5d3cd]/90 px-9 py-4 text-[15px] font-semibold text-[#201b24] transition hover:bg-[#dfc9c1] hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6d72d8] min-h-[48px]"
+              className="mt-8 sm:mt-12 lg:mt-14 inline-flex min-w-[160px] sm:min-w-[200px] items-center justify-center rounded-full bg-[#e5d3cd]/90 px-6 py-3 sm:px-9 sm:py-4 text-[13px] sm:text-[15px] font-semibold text-[#201b24] transition hover:bg-[#dfc9c1] hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6d72d8] min-h-[44px]"
               aria-label="Réserver une démo gratuitement"
             >
               Reserver une demo
             </Link>
 
-            <p className="mx-auto mt-10 max-w-[480px] text-[13px] font-medium leading-7 text-[#807779] sm:text-[14px]">
+            <p className="mx-auto mt-6 sm:mt-10 max-w-[480px] text-[12px] sm:text-[13px] md:text-[14px] font-medium leading-6 sm:leading-7 text-[#807779]">
               Utilise par enseignants, ecoles et formations professionnelles
             </p>
           </div>
@@ -64,86 +64,83 @@ export default function HomePage() {
       </section>
 
       {/* Problem Section with Bot */}
-      <section className="relative overflow-hidden rounded-t-[40px] bg-[#141426] px-5 pt-24 text-white sm:px-8 sm:pt-32 lg:px-10">
+      <section className="relative overflow-hidden rounded-t-[24px] sm:rounded-t-[40px] bg-[#141426] px-4 pt-16 text-white sm:px-8 sm:pt-24 lg:px-10 lg:pt-32">
         <div className="mx-auto max-w-[1120px]">
           <div className="mx-auto max-w-[880px] text-center">
-            <h2 className="text-balance font-display text-[44px] font-semibold leading-[1.05] tracking-[-0.05em] sm:text-[60px] lg:text-[68px]">
+            <h2 className="text-balance font-display text-[32px] leading-[1.1] tracking-[-0.04em] sm:text-[48px] md:text-[60px] lg:text-[68px] font-semibold">
               Enseigner aujourd&apos;hui n&apos;a jamais ete aussi exigeant.
             </h2>
-            <p className="mx-auto mt-12 max-w-[780px] text-[16px] leading-8 text-white/70 sm:text-[17px]">
+            <p className="mx-auto mt-6 sm:mt-12 max-w-[780px] text-[14px] sm:text-[16px] leading-7 sm:leading-8 text-white/70">
               Les classes aux profils varies d&apos;apprenants et des programmes souvent trop
               charges rendent l&apos;apprentissage complexe.
             </p>
-            <p className="mx-auto mt-6 max-w-[780px] text-[16px] leading-8 text-white/70 sm:text-[17px]">
+            <p className="mx-auto mt-4 sm:mt-6 max-w-[780px] text-[14px] sm:text-[16px] leading-7 sm:leading-8 text-white/70">
               Si l&apos;IA transforme aujourd&apos;hui les choses, elle le fait malheureusement
               souvent dans un sens qui ne repond pas entierement aux besoins reels du systeme
               educatif.
             </p>
           </div>
 
-          <div className="relative mt-24 h-[340px] sm:h-[480px] lg:h-[540px] max-w-[900px] mx-auto">
+          <div className="relative mt-12 sm:mt-20 lg:mt-24 h-[280px] xs:h-[340px] sm:h-[400px] md:h-[480px] lg:h-[540px] max-w-[900px] mx-auto px-2 sm:px-0">
             <Image
               src="/home/bot 2.png"
               alt="Illustration Hummind - Tuteur IA conversationnel"
               fill
               className="object-contain object-center lg:object-bottom"
               priority
-              quality={90}
+              quality={85}
             />
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="bg-[linear-gradient(180deg,#d4d5fb_0%,#f5f1ef_24%,#f5f1ef_100%)] px-5 py-24 sm:px-8 sm:py-32 lg:px-10">
+      <section className="bg-[linear-gradient(180deg,#d4d5fb_0%,#f5f1ef_24%,#f5f1ef_100%)] px-4 py-16 sm:px-8 sm:py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-[1120px]">
-          <div className="mx-auto max-w-[840px] text-center">
-            <h2 className="text-balance font-display text-[44px] font-semibold leading-[1.05] tracking-[-0.05em] text-[#171728] sm:text-[60px] lg:text-[68px]">
+          <div className="mx-auto max-w-[840px] text-center px-2 sm:px-0">
+            <h2 className="text-balance font-display text-[32px] leading-[1.1] tracking-[-0.04em] sm:text-[48px] md:text-[60px] lg:text-[68px] font-semibold text-[#171728]">
               Un apprentissage orchestre, de l&apos;objectif a la maitrise.
             </h2>
-            <p className="mx-auto mt-10 max-w-[780px] text-[16px] leading-8 text-[#726b73] sm:text-[17px]">
+            <p className="mx-auto mt-6 sm:mt-10 max-w-[780px] text-[14px] sm:text-[16px] leading-7 sm:leading-8 text-[#726b73]">
               HummindOS structure, accompagne et mesure l&apos;apprentissage du premier objectif
               jusqu&apos;a la maitrise reelle. Nous ne vous offrons pas un gadget, mais un
               veritable outil qui englobe toutes les etapes de la pedagogie.
             </p>
           </div>
 
-          <div className="mx-auto mt-18 grid max-w-[980px] gap-6 sm:grid-cols-1 md:grid-cols-3">
+          <div className="mx-auto mt-12 sm:mt-16 lg:mt-20 grid max-w-[1000px] gap-4 sm:gap-6 px-2 sm:px-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {CARDS.map((card) => (
               <article
                 key={card.title}
-                className={`group flex min-h-[300px] flex-col rounded-[24px] px-7 pb-8 pt-8 shadow-[0_18px_40px_rgba(20,20,38,0.08)] transition hover:shadow-[0_28px_60px_rgba(20,20,38,0.16)] hover:scale-[1.02] cursor-pointer ${card.tone}`}
+                className={`group flex min-h-[280px] sm:min-h-[300px] flex-col rounded-[20px] sm:rounded-[24px] px-5 sm:px-7 pb-6 sm:pb-8 pt-6 sm:pt-8 shadow-[0_18px_40px_rgba(20,20,38,0.08)] transition hover:shadow-[0_28px_60px_rgba(20,20,38,0.16)] hover:scale-[1.02] cursor-pointer ${card.tone}`}
               >
-                {/* Icon container with better proportions */}
                 <div className="flex items-center justify-start">
-                  <div className="relative h-32 w-32 flex-shrink-0 transition group-hover:scale-110 duration-300">
+                  <div className="relative h-24 w-24 sm:h-32 sm:w-32 flex-shrink-0 transition group-hover:scale-110 duration-300">
                     <Image src={card.image} alt="" fill className="object-contain object-left-top" />
                   </div>
                 </div>
 
-                {/* Text content with better spacing */}
-                <div className="mt-10 flex flex-col flex-1">
-                  <h3 className={`text-[22px] font-semibold leading-[1.3] ${card.titleColor}`}>
+                <div className="mt-6 sm:mt-10 flex flex-col flex-1">
+                  <h3 className={`text-[18px] sm:text-[22px] font-semibold leading-[1.3] ${card.titleColor}`}>
                     {card.title}
                   </h3>
-                  <p className={`mt-5 text-[15px] leading-[1.6] ${card.descColor}`}>{card.desc}</p>
+                  <p className={`mt-3 sm:mt-5 text-[13px] sm:text-[15px] leading-[1.6] ${card.descColor}`}>{card.desc}</p>
                 </div>
 
-                {/* Arrow indicator */}
-                <div className="mt-8 flex justify-start transition group-hover:translate-x-1 duration-300">
-                  <ArrowRight className={`h-6 w-6 ${card.arrowColor}`} />
+                <div className="mt-6 sm:mt-8 flex justify-start transition group-hover:translate-x-1 duration-300">
+                  <ArrowRight className={`h-5 w-5 sm:h-6 sm:w-6 ${card.arrowColor}`} />
                 </div>
               </article>
             ))}
           </div>
 
-          <div className="mx-auto mt-28 max-w-[840px] text-center">
-            <h2 className="text-balance font-display text-[42px] font-semibold leading-[1.06] tracking-[-0.05em] text-[#171728] sm:text-[56px] lg:text-[64px]">
+          <div className="mx-auto mt-20 sm:mt-28 max-w-[840px] text-center px-2 sm:px-0">
+            <h2 className="text-balance font-display text-[32px] leading-[1.1] tracking-[-0.04em] sm:text-[48px] md:text-[56px] lg:text-[64px] font-semibold text-[#171728]">
               Demarrer gratuitement des maintenant
             </h2>
             <Link
               href={'/demo' as Route}
-              className="mt-12 inline-flex min-w-[200px] items-center justify-center rounded-full bg-[#e2dfe4] px-9 py-4 text-[15px] font-semibold text-[#1c1721] transition hover:bg-[#d9d4da] hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6d72d8] min-h-[48px]"
+              className="mt-8 sm:mt-12 inline-flex min-w-[160px] sm:min-w-[200px] items-center justify-center rounded-full bg-[#e2dfe4] px-6 sm:px-9 py-3 sm:py-4 text-[13px] sm:text-[15px] font-semibold text-[#1c1721] transition hover:bg-[#d9d4da] hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6d72d8] min-h-[44px]"
               aria-label="Démarrer gratuitement"
             >
               Demarrer gratuitement
@@ -155,38 +152,38 @@ export default function HomePage() {
       {/* FAQ Section */}
       <section className="rounded-t-[40px] bg-[#141426] px-5 pb-20 pt-28 text-white sm:px-8 sm:pb-24 sm:pt-36 lg:px-10">
         <div className="mx-auto max-w-[1120px]">
-          <div className="text-center">
-            <h2 className="font-display text-[56px] font-semibold tracking-[-0.05em] sm:text-[72px] lg:text-[80px]">
+          <div className="text-center px-2 sm:px-0">
+            <h2 className="font-display text-[40px] leading-[1.1] tracking-[-0.04em] sm:text-[56px] md:text-[72px] lg:text-[80px] font-semibold">
               FAQ
             </h2>
-            <p className="mt-6 text-[16px] sm:text-[18px] text-white/65">Vous aviez des questions ?</p>
+            <p className="mt-4 sm:mt-6 text-[14px] sm:text-[16px] md:text-[18px] text-white/65">Vous aviez des questions ?</p>
           </div>
 
-          <div className="mx-auto mt-24 max-w-[840px] space-y-5">
+          <div className="mx-auto mt-12 sm:mt-20 lg:mt-24 max-w-[840px] space-y-3 sm:space-y-5 px-2 sm:px-0">
             {FAQ_ITEMS.map((item, index) => {
               const isOpen = openFaq === index;
               return (
                 <div
                   key={item.q}
-                  className="overflow-hidden rounded-[16px] border border-white/8 bg-[#2a293d]/80 transition hover:border-white/15 hover:bg-[#2a293d] focus-within:ring-2 focus-within:ring-[#6d72d8]"
+                  className="overflow-hidden rounded-[14px] sm:rounded-[16px] border border-white/8 bg-[#2a293d]/80 transition hover:border-white/15 hover:bg-[#2a293d] focus-within:ring-2 focus-within:ring-[#6d72d8]"
                 >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : index)}
-                    className="flex w-full items-center justify-between gap-4 px-8 py-6 text-left text-[16px] sm:text-[17px] font-semibold text-white/92 transition hover:text-white hover:bg-white/[0.03] active:bg-white/[0.05] focus:outline-none min-h-[44px]"
+                    className="flex w-full items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 lg:px-8 py-4 sm:py-6 text-left text-[14px] sm:text-[16px] lg:text-[17px] font-semibold text-white/92 transition hover:text-white hover:bg-white/[0.03] active:bg-white/[0.05] focus:outline-none min-h-[44px]"
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${index}`}
                   >
-                    <span className="leading-7">{item.q}</span>
+                    <span className="leading-6 sm:leading-7">{item.q}</span>
                     <ChevronDown
-                      className={`h-5 w-5 flex-shrink-0 text-white/45 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                      className={`h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 text-white/45 transition-transform ${isOpen ? 'rotate-180' : ''}`}
                       aria-hidden="true"
                     />
                   </button>
                   {isOpen ? (
                     <div
                       id={`faq-answer-${index}`}
-                      className="border-t border-white/8 px-8 py-6 text-[15px] sm:text-[16px] leading-8 text-white/70 animate-in fade-in"
+                      className="border-t border-white/8 px-4 sm:px-6 lg:px-8 py-4 sm:py-6 text-[13px] sm:text-[15px] lg:text-[16px] leading-6 sm:leading-8 text-white/70 animate-in fade-in"
                     >
                       {item.a}
                     </div>
