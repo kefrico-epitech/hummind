@@ -16,6 +16,6 @@ import { RolesGuard } from './roles.guard';
     // décorées par @Roles(...) ; sinon il laisse passer.
     { provide: APP_GUARD, useClass: RolesGuard },
   ],
-  exports: [AuthService, JwtAuthGuard],
+  exports: [AuthService, JwtAuthGuard, JwtModule],
 })
 export class AuthModule {}

@@ -5,6 +5,9 @@ import { AiModule } from './ai/ai.module';
 import { MemoryModule } from './memory/memory.module';
 import { HealthModule } from './health/health.module';
 import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
+import { CoursesModule } from './courses/courses.module';
+import { OrgModule } from './org/org.module';
 
 /**
  * Module racine. Les fondations (config, prisma) sont globales.
@@ -13,6 +16,16 @@ import { AuthModule } from './auth/auth.module';
  * ajoutés ici au fur et à mesure de la reconstruction.
  */
 @Module({
-  imports: [ConfigModule, PrismaModule, AiModule, MemoryModule, HealthModule, AuthModule],
+  imports: [
+    ConfigModule,
+    PrismaModule,
+    AiModule,
+    MemoryModule,
+    HealthModule,
+    AuthModule,
+    UsersModule,
+    CoursesModule,
+    OrgModule,
+  ],
 })
 export class AppModule {}

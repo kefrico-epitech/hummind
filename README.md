@@ -49,7 +49,7 @@ JWT par **cookies httpOnly** : `hm_session` (access, ~15 min) + `hm_refresh` (re
 | **contact** | Demandes de démo publiques | `POST /contact` |
 | **join** | Liens d'invitation publics | `GET /join/:code`, `POST /join/:code/signup`, `/request` |
 | **admin** | Dashboard ROOT (stats, contacts) | `GET /admin/stats`, `/admin/contacts…`, `POST …/accept` `/reject` |
-| **org** | Hiérarchie Entity (ORG→DÉPT→SALLE), membres, invitations, demandes d'accès, cours | `GET /org/mine`, `/org/stats`, `POST /org/:id/children` `/courses`, `…/members…`, `…/access-requests…` |
+| **org** | Hiérarchie Entity (ORG→DÉPT→CLASSE), membres, invitations, demandes d'accès, cours | `GET /org/mine`, `/org/stats`, `POST /org/:id/children` `/courses`, `…/members…`, `…/access-requests…` |
 | **courses** | Builder de cours (modules→leçons→blocs→quiz), publication, génération IA, documents RAG | `GET/PATCH/DELETE /courses/:id`, `POST …/publish` `/unpublish`, `…/modules` `…/lessons` `…/blocks` (+ `/reorder`), `POST …/ai/generate-outline` `/generate-course` `/generate-lesson`, `…/documents` |
 | **ai** | Façade OpenAI (gpt-4o-mini) + provider stub | génération leçon/plan/contenu, évaluation apprenant, synthèse mémoire, embeddings (text-embedding-3-small) |
 | **tutor** | Tuteur conversationnel **streamé** | `GET /learner/tutor/:courseId/:lessonId`, `POST …/message` (stream) |
@@ -63,7 +63,7 @@ JWT par **cookies httpOnly** : `hm_session` (access, ~15 min) + `hm_refresh` (re
 | **prisma / config / common** | PrismaService · validation env (zod) · filtres/erreurs | — |
 
 ### Modèle de données (Prisma — principaux modèles)
-- **Identité & org** : `User`, `RefreshToken`, `ContactRequest`, `Entity` (arbre ORGANISATION/DEPARTEMENT/SALLE/INDEPENDANT), `EntityMember` (OWNER/ADMIN/INSTRUCTOR/LEARNER/VIEWER), `EntityInvitation`, `AccessRequest`, `Subscription`, `SubscriptionEvent`.
+- **Identité & org** : `User`, `RefreshToken`, `ContactRequest`, `Entity` (arbre ORGANISATION/DEPARTEMENT/CLASSE/INDEPENDANT), `EntityMember` (OWNER/ADMIN/INSTRUCTOR/LEARNER/VIEWER), `EntityInvitation`, `AccessRequest`, `Subscription`, `SubscriptionEvent`.
 - **Contenu** : `Course` (DRAFT/PUBLISHED/ARCHIVED ; visibility UNLIMITED/LIMITED/PUBLIC), `Module`, `Lesson`, `Block` (TITLE/CONTENT/IMAGE/CODE/MATH/TABLE/CHART/DRAWING/QUIZ/EXERCISE), `Quiz`, `Question`, `Answer`.
 - **Progression** : `Enrollment`, `LessonProgress`, `QuizAttempt`, `Certificate`.
 - **Tutorat & perso** : `TutorConversation`, `TutorMessage`, `LearnerProfile`, `GamificationProfile`, `WeeklyChallenge`.
@@ -115,7 +115,7 @@ app/                    # App Router (voir routes)
 
 ### Tuteur & gamification
 - **Tuteur** (`features/learner` : `TutorChat.tsx`, `tutor.ts`) : `streamTutorMessage()` lit un `ReadableStream` token par token (`onDelta`), affiche les bulles, intègre quiz inline et progression des leçons.
-- **Gamification** (`RewardsView.tsx`) : niveau/XP, séries (🔥), objectif quotidien (anneau), badges, défis hebdo, classement de salle, profil d'apprentissage inféré par l'IA.
+- **Gamification** (`RewardsView.tsx`) : niveau/XP, séries (🔥), objectif quotidien (anneau), badges, défis hebdo, classement de classe, profil d'apprentissage inféré par l'IA.
 
 ---
 
@@ -130,11 +130,11 @@ Décision UX validée : **pas de wizard**. On garde l'enseignant dans son flux.
  Modal de création  ──►  Éditeur complet  ──►  Publier quand prêt
  (titre, domaine,        (modules→leçons→        (confirmation +
   niveau, description,     blocs, IA, import        rappel visibilité/
-  objectifs ; salle        docs) ; ⚙️ Paramètres     dates)
+  objectifs ; classe       docs) ; ⚙️ Paramètres     dates)
   selon contexte)          éditables à tout moment
 ```
 
-- **Modal de création** (`CreateCourseModal.tsx`) : informations essentielles (mêmes champs qu'avant), salle déduite du contexte (depuis une salle) ou sélecteur. → crée le cours en DRAFT puis ouvre directement l'éditeur.
+- **Modal de création** (`CreateCourseModal.tsx`) : informations essentielles (mêmes champs qu'avant), classe déduite du contexte (depuis une classe) ou sélecteur. → crée le cours en DRAFT puis ouvre directement l'éditeur.
 - **Éditeur** (`CourseEditor.tsx`) : arbre modules/leçons/blocs, génération IA (plan + leçon unique), import de documents.
 - **Panneau « Paramètres du cours »** (`CourseSettingsPanel.tsx`, slide-over) : description, domaine, niveau, objectifs, **visibilité**, **période d'accès** — éditables à tout moment.
 - **Publication à la demande** : bouton Publier + confirmation faisant remonter visibilité/dates (filet de sécurité ; le backend refuse un cours vide via `COURSE_EMPTY`).

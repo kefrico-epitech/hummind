@@ -15,7 +15,7 @@ export class ApiError extends Error {
 }
 
 // Chemins publics : un 401 ne doit PAS déclencher de refresh/redirection.
-const PUBLIC_PATHS = ['/support', '/join', '/contact', '/health'];
+const PUBLIC_PATHS = ['/support', '/join', '/contact', '/health', '/auth'];
 
 let refreshing: Promise<boolean> | null = null;
 

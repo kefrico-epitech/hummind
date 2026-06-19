@@ -4,8 +4,8 @@
  */
 export const theme = {
   fonts: {
-    sans: 'var(--font-inter)',
-    display: 'var(--font-poppins)',
+    sans: "'Inter', ui-sans-serif, system-ui, sans-serif",
+    display: "'Inter', ui-sans-serif, system-ui, sans-serif",
   },
   /** Mode visuel par défaut. À brancher sur un toggle si on fait du dark. */
   mode: 'light' as 'light' | 'dark',
