@@ -54,21 +54,54 @@ export default function HomePage() {
           </header>
 
           {mobileMenuOpen && (
-            <div className="absolute left-0 right-0 top-full mt-2 sm:hidden rounded-xl border border-white/85 bg-white/90 shadow-[0_16px_40px_rgba(28,22,54,0.12)] backdrop-blur z-50">
-              <nav className="flex flex-col gap-0 p-4">
+            <div className="fixed inset-0 top-0 sm:hidden z-40 bg-black/40 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
+          )}
+
+          {mobileMenuOpen && (
+            <div className="fixed inset-0 top-0 sm:hidden z-50 flex flex-col bg-gradient-to-br from-[#f2effd] via-white to-[#f5f1ef] overflow-y-auto">
+              <div className="flex items-center justify-between px-4 py-6 border-b border-white/50">
+                <Link
+                  href={'/' as Route}
+                  className="flex items-center"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Image src="/home/logo.png" alt="HummindOS" width={92} height={22} className="h-6 w-auto" />
+                </Link>
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="inline-flex items-center justify-center p-2 text-[#151526] hover:opacity-60 transition"
+                  aria-label="Fermer"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+
+              <nav className="flex flex-col px-6 py-8 gap-1">
                 <Link
                   href={'/produit' as Route}
-                  className="px-4 py-3 text-[13px] font-medium text-[#151526] rounded-lg hover:bg-white/50 transition focus:outline-none focus:ring-2 focus:ring-[#6d72d8]"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-4 py-4 text-[16px] font-display font-semibold text-[#151526] rounded-lg hover:bg-white/60 transition focus:outline-none focus:ring-2 focus:ring-[#6b4ee6]"
                 >
                   Notre produit
                 </Link>
                 <Link
                   href={'/login' as Route}
-                  className="px-4 py-3 text-[13px] font-medium text-[#151526] rounded-lg hover:bg-white/50 transition focus:outline-none focus:ring-2 focus:ring-[#6d72d8]"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-4 py-4 text-[16px] font-display font-semibold text-[#151526] rounded-lg hover:bg-white/60 transition focus:outline-none focus:ring-2 focus:ring-[#6b4ee6]"
                 >
                   Se connecter
                 </Link>
               </nav>
+
+              <div className="mt-auto px-6 pb-8">
+                <Link
+                  href={'/demo' as Route}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#6b4ee6] to-[#583bd0] px-6 py-4 text-[15px] font-semibold text-white shadow-lg hover:shadow-xl active:scale-95 transition focus:outline-none focus:ring-2 focus:ring-[#6b4ee6] focus:ring-offset-2 min-h-[52px]"
+                >
+                  Reserver una demo
+                </Link>
+              </div>
             </div>
           )}
 
