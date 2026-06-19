@@ -106,7 +106,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden rounded-t-[24px] sm:rounded-t-[40px] bg-[#141426] px-4 pt-16 text-white sm:px-8 sm:pt-24 lg:px-10 lg:pt-32">
         <div className="mx-auto max-w-[1120px]">
           <div className="mx-auto max-w-[880px] text-center">
-            <h2 className="text-[56px] font-bold leading-tight tracking-normal">
+            <h2 className="text-[48px] sm:text-[52px] font-bold leading-tight tracking-normal">
               Enseigner aujourd&apos;hui n&apos;a jamais<br/>
               été aussi exigeant.
             </h2>
