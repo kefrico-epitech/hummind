@@ -106,8 +106,9 @@ export default function HomePage() {
       <section className="relative overflow-hidden rounded-t-[24px] sm:rounded-t-[40px] bg-[#141426] px-4 pt-16 text-white sm:px-8 sm:pt-24 lg:px-10 lg:pt-32">
         <div className="mx-auto max-w-[1120px]">
           <div className="mx-auto max-w-[880px] text-center">
-            <h2 className="text-balance font-display text-[32px] leading-[1.1] tracking-[-0.04em] sm:text-[48px] md:text-[60px] lg:text-[68px] font-semibold">
-              Enseigner aujourd&apos;hui n&apos;a jamais ete aussi exigeant.
+            <h2 className="text-[56px] font-bold leading-tight tracking-normal">
+              Enseigner aujourd&apos;hui n&apos;a jamais<br/>
+              été aussi exigeant.
             </h2>
             <p className="mx-auto mt-6 sm:mt-12 max-w-[780px] text-[14px] sm:text-[16px] leading-7 sm:leading-8 text-white/70">
               Les classes aux profils varies d&apos;apprenants et des programmes souvent trop
