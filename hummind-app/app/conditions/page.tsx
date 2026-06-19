@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header';
 import { PageLayout } from '@/components/PageLayout';
 import { Footer } from '@/components/Footer';
+import { SectionTitle } from '@/components/Typography';
 
 export default function ConditionsPage() {
   return (
@@ -13,9 +14,9 @@ export default function ConditionsPage() {
         <div className="mx-auto max-w-[950px]">
           <div className="text-center mb-8 xs:mb-10 sm:mb-12">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">Conditions</p>
-            <h1 className="mt-4 font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-semibold tracking-[-0.045em] text-[#17172A]">
+            <SectionTitle className="mt-4">
               Conditions d'utilisation.
-            </h1>
+            </SectionTitle>
           </div>
           <div className="space-y-4 xs:space-y-5 sm:space-y-6 text-xs xs:text-sm leading-6 xs:leading-7 text-black/55">
             <p>Hummind est en reconstruction v1. Les contenus, parcours et fonctionnalités peuvent évoluer.</p>

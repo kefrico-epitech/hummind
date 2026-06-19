@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { SectionTitle } from '@/components/Typography';
 
 export default function DemoPage() {
   const [formData, setFormData] = useState({
@@ -34,9 +35,9 @@ export default function DemoPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xs:gap-10 sm:gap-12 lg:gap-16">
             <div className="flex flex-col justify-start pt-6 xs:pt-8">
               <div>
-                <h1 className="text-balance font-display text-[36px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#171728] xs:text-[42px] sm:text-[48px]">
+                <SectionTitle className="text-balance text-[36px] leading-[1.05] tracking-[-0.04em] text-[#171728] xs:text-[42px] sm:text-[48px]">
                   Parlons de votre projet <span className="bg-[linear-gradient(90deg,#5656a2_0%,#e84747_100%)] bg-clip-text text-transparent">pedagogique</span>
-                </h1>
+                </SectionTitle>
 
                 <p className="mt-6 xs:mt-8 text-[13px] xs:text-[14px] sm:text-[15px] leading-7 text-[#807779]">
                   Que vous soyez enseignant, directeur d'etablissement ou responsable de formation, notre equipe vous repond sous 24h

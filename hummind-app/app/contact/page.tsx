@@ -5,6 +5,7 @@ import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { PageLayout } from '@/components/PageLayout';
 import { Footer } from '@/components/Footer';
+import { FeatureTitle } from '@/components/Typography';
 
 function ContactCard({
   icon: Icon,
@@ -18,7 +19,7 @@ function ContactCard({
   return (
     <article className="rounded-[20px] xs:rounded-[24px] sm:rounded-[28px] border border-black/8 bg-white p-4 xs:p-5 sm:p-6 shadow-[0_20px_50px_rgba(17,17,20,0.08)]">
       <Icon className="h-8 xs:h-9 sm:h-10 w-8 xs:w-9 sm:w-10 text-brand-700" />
-      <h2 className="mt-6 xs:mt-7 sm:mt-8 text-lg xs:text-xl sm:text-2xl font-semibold text-[#17172A]">{title}</h2>
+      <FeatureTitle>{title}</FeatureTitle>
       <p className="mt-2 xs:mt-2.5 sm:mt-3 text-xs xs:text-sm leading-5 xs:leading-6 text-black/55">{text}</p>
     </article>
   );

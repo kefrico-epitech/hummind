@@ -4,6 +4,7 @@ import { ArrowRight, Brain, FileText, Sparkles } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { PageLayout } from '@/components/PageLayout';
 import { Footer } from '@/components/Footer';
+import { FeatureTitle } from '@/components/Typography';
 import { cn } from '@/shared/lib/cn';
 
 export default function ProduitPage() {
@@ -65,7 +66,7 @@ export default function ProduitPage() {
                 )}
               >
                 <item.icon className="h-8 xs:h-9 sm:h-10 w-8 xs:w-9 sm:w-10" />
-                <h2 className="mt-6 xs:mt-7 sm:mt-8 text-lg xs:text-xl sm:text-2xl font-semibold">{item.title}</h2>
+                <FeatureTitle>{item.title}</FeatureTitle>
                 <p className="mt-2 xs:mt-2.5 sm:mt-3 text-xs xs:text-sm leading-5 xs:leading-6 opacity-75">{item.desc}</p>
               </article>
             ))}
