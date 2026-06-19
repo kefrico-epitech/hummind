@@ -4,6 +4,7 @@ import { CourseCreateForm } from '@/features/cours/components/course-create-form
 import { LogoutButton } from '@/features/auth/components/logout-button';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { SectionTitle } from '@/components/Typography';
 
 export const metadata: Metadata = {
   title: 'Créer un cours',
@@ -25,9 +26,9 @@ export default async function NewCoursePage() {
           <div className="mb-8 flex flex-col gap-4 rounded-[20px] xs:rounded-[24px] sm:rounded-[28px] border border-black/8 bg-white/80 p-4 xs:p-5 sm:p-6 backdrop-blur sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">Espace enseignement</p>
-              <h1 className="mt-2 font-display text-xl xs:text-2xl sm:text-3xl font-semibold text-[#111116]">
+              <SectionTitle className="mt-2 text-xl xs:text-2xl sm:text-3xl text-[#111116]">
                 Création de cours
-              </h1>
+              </SectionTitle>
               <p className="mt-1 max-w-2xl text-xs xs:text-sm text-black/55">
                 Version front pour tester le flux de création avant de brancher l'éditeur complet.
               </p>
