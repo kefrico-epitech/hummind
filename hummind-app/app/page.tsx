@@ -81,7 +81,7 @@ export default function HomePage() {
             </div>
           )}
           <div className="mx-auto max-w-[950px] px-2 text-center sm:px-4 flex-1 flex flex-col items-center justify-center">
-            <h1 className="text-balance font-display text-[36px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#171728] xs:text-[42px] sm:text-[56px] md:text-[68px] lg:text-[80px]">
+            <h1 className="text-balance text-[56px] font-black leading-tight tracking-normal text-[#171728]">
               Transformer vos cours en une{' '}
               <span className="bg-[linear-gradient(90deg,#5656a2_0%,#e84747_100%)] bg-clip-text text-transparent">
                 experience d&apos;apprentissage guidee
