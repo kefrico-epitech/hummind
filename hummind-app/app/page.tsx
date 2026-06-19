@@ -18,7 +18,7 @@ export default function HomePage() {
         <div className="absolute right-[-12%] top-[-5%] h-72 w-72 rounded-full bg-[#cfd1ff]/80 blur-[100px] sm:h-96 sm:w-96 sm:blur-[140px]" />
 
         <div className="relative mx-auto max-w-[1120px]">
-          <header className="mx-auto flex w-fit flex-col items-center gap-1.5 rounded-xl sm:rounded-full border border-white/85 bg-white/90 px-3 py-2 sm:px-3 sm:py-2 shadow-[0_16px_40px_rgba(28,22,54,0.12)] backdrop-blur sm:flex-row sm:gap-2">
+          <header className="mx-auto flex w-fit flex-row items-center gap-1.5 rounded-xl sm:rounded-full border border-white/85 bg-white/90 px-3 py-2 sm:px-3 sm:py-2 shadow-[0_16px_40px_rgba(28,22,54,0.12)] backdrop-blur sm:gap-2">
             <Link
               href={'/' as Route}
               className="flex items-center rounded-full px-1.5 py-1 text-[10px] sm:text-[12px] font-semibold text-[#151526] transition hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-[#6d72d8] sm:px-4 sm:py-2"
