@@ -191,7 +191,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="rounded-t-[40px] bg-[#141426] px-5 pb-20 pt-28 text-white sm:px-8 sm:pb-24 sm:pt-36 lg:px-10">
+      <section className="rounded-t-[40px] rounded-b-[40px] bg-[#141426] px-5 pb-20 pt-28 text-white sm:px-8 sm:pb-24 sm:pt-36 lg:px-10">
         <div className="mx-auto max-w-[1120px]">
           <div className="text-center px-2 sm:px-0">
             <h2 className="font-display text-[40px] leading-[1.1] tracking-[-0.04em] sm:text-[56px] md:text-[72px] lg:text-[80px] font-semibold">
