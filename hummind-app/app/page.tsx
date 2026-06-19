@@ -42,7 +42,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-[950px] px-3 pb-24 pt-18 text-center sm:pb-32 sm:pt-24 lg:pb-40 lg:pt-32">
             <h1 className="text-balance font-display text-[48px] font-semibold leading-[1.0] tracking-[-0.05em] text-[#171728] sm:text-[64px] lg:text-[80px]">
               Transformer vos cours en une{' '}
-              <span className="bg-[linear-gradient(90deg,#6d72d8_0%,#9a70d8_34%,#cd7dad_66%,#ee9c76_100%)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#5656a2_0%,#e84747_100%)] bg-clip-text text-transparent">
                 experience d&apos;apprentissage guidee
               </span>{' '}
               interactive et mesurable.
