@@ -116,15 +116,15 @@ import { HeroTitle } from '@/components/Typography';
 
 ## Pages Updated
 
-- [x] Homepage (page.tsx)
-- [ ] /produit
-- [ ] /demo
-- [ ] /faq
-- [ ] /contact
-- [ ] /login
-- [ ] /conditions
-- [ ] /confidentialite
-- [ ] /espace/cours/nuevo
+- [x] Homepage (page.tsx) - HeroTitle, SectionTitle, FAQTitle, Subtitle, CTATitle
+- [x] /produit - FeatureTitle
+- [x] /demo - SectionTitle
+- [x] /faq - FAQTitle (via PageLayout)
+- [x] /contact - FeatureTitle
+- [x] /login - SectionTitle (via PageLayout)
+- [x] /conditions - SectionTitle
+- [x] /confidentialite - SectionTitle
+- [x] /espace/cours/nouveau - SectionTitle
 
 ## Next Steps
 
