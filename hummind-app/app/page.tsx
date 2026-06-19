@@ -15,12 +15,12 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#f5f1ef] text-[#141426]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#d8d9fb_0%,#f7ece7_54%,#f5f1ef_100%)] px-4 pb-16 pt-6 sm:px-6 sm:pb-24 sm:pt-8 lg:px-10 lg:pb-32 lg:pt-12">
+      <section className="relative h-screen overflow-hidden bg-[linear-gradient(180deg,#d8d9fb_0%,#f7ece7_54%,#f5f1ef_100%)] px-4 sm:px-6 lg:px-10 flex flex-col items-center justify-center">
         <div className="absolute left-[-15%] top-[20%] h-64 w-64 rounded-full bg-[#f4cabc]/70 blur-[100px] sm:h-80 sm:w-80 sm:blur-[120px]" />
         <div className="absolute right-[-12%] top-[-5%] h-72 w-72 rounded-full bg-[#cfd1ff]/80 blur-[100px] sm:h-96 sm:w-96 sm:blur-[140px]" />
 
-        <div className="relative mx-auto max-w-[1120px]">
-          <header className="relative mx-auto flex w-full items-center justify-between gap-1 xs:gap-1.5 sm:gap-2 rounded-xl sm:rounded-full border border-white/85 bg-white/90 px-2.5 xs:px-3 sm:px-6 py-2 xs:py-2.5 sm:py-3 shadow-[0_16px_40px_rgba(28,22,54,0.12)] backdrop-blur sm:w-fit">
+        <div className="relative mx-auto max-w-[1120px] w-full h-full flex flex-col items-center justify-between pt-4 sm:pt-6 pb-12 sm:pb-16">
+          <header className="relative mx-auto flex w-full items-center justify-center gap-1 xs:gap-1.5 sm:gap-2 rounded-xl sm:rounded-full border border-white/85 bg-white/90 px-2.5 xs:px-3 sm:px-6 py-2 xs:py-2.5 sm:py-3 shadow-[0_16px_40px_rgba(28,22,54,0.12)] backdrop-blur sm:w-fit">
             <Link
               href={'/' as Route}
               className="flex items-center rounded-full px-1.5 xs:px-2 sm:px-4 py-1 xs:py-1.5 sm:py-2 text-[10px] xs:text-[11px] sm:text-[12px] font-semibold text-[#151526] transition hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-[#6d72d8]"
@@ -80,7 +80,7 @@ export default function HomePage() {
               </Link>
             </div>
           )}
-          <div className="mx-auto max-w-[950px] px-2 pb-16 pt-12 text-center sm:px-4 sm:pb-24 sm:pt-20 lg:pb-40 lg:pt-32">
+          <div className="mx-auto max-w-[950px] px-2 text-center sm:px-4 flex-1 flex flex-col items-center justify-center">
             <h1 className="text-balance font-display text-[36px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#171728] xs:text-[42px] sm:text-[56px] md:text-[68px] lg:text-[80px]">
               Transformer vos cours en une{' '}
               <span className="bg-[linear-gradient(90deg,#5656a2_0%,#e84747_100%)] bg-clip-text text-transparent">
